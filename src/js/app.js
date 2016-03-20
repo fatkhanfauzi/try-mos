@@ -14,6 +14,9 @@ var colorPlugin = require("./ext/color.js");
 
 var localStorageLoader = require("./ext/localstorage.js");
 
+
+console.log('wedus');
+
 if (typeof ko == 'undefined') throw "Cannot find knockout.js library!";
 if (typeof $ == 'undefined') throw "Cannot find jquery library!";
 

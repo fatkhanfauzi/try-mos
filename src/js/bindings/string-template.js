@@ -8,7 +8,7 @@ var templates = {};
 //define a template source that simply treats the template name as its content
 ko.templateSources.stringTemplate = function(templateName, template) {
   this.templateName = templateName;
-  this.template = template;
+  this.template = template || 'test';
   this._data = {};
 };
 

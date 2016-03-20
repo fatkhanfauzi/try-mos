@@ -33,7 +33,7 @@ module.exports = function(grunt) {
         reporter: require('jshint-stylish'),
         sub: true,
         jshintrc: true,
-        browserify: true
+        browserify: false
 
       }
     },
@@ -95,7 +95,7 @@ module.exports = function(grunt) {
             fullPaths: false,
             standalone: 'Mosaico'
           },
-          transform: ['uglifyify'],
+          // transform: ['uglifyify'],
           watch: true,
         },
         files: {
@@ -145,7 +145,7 @@ module.exports = function(grunt) {
         options: {
           port: 9006,
           showStack: true,
-          hostname: '127.0.0.1',
+          hostname: '192.168.56.101',
           open: true,
           bases: ['.'],
           server: 'backend/main.js'
@@ -231,7 +231,7 @@ module.exports = function(grunt) {
 
   });
 
-  grunt.registerTask('js', ['combineKOTemplates', 'browserify', 'exorcise']);
+  grunt.registerTask('js', ['combineKOTemplates', 'browserify']);
   grunt.registerTask('css', ['less', 'postcss']);
   grunt.registerTask('server', ['express', 'watch', 'express-keepalive']);
   grunt.registerTask('build', ['bowercopy', 'copy', 'jshint', 'js', 'css']);

@@ -5,6 +5,9 @@ module.exports = function(grunt) {
   grunt.registerMultiTask("combineKOTemplates", function() {
     var files = grunt.file.expand(this.data.src),
         result = "";
+
+        console.log('wedus')
+        console.log(files)
  
     var script = this.data.templateSystemPath || '../src/js/bindings/choose-template.js';
 
